@@ -1,0 +1,15 @@
+OpenXR Logo
+Revised February 2017
+
+Colors
+	RGB: 120, 43, 144
+	Hex: #782B90
+	CMYK: 65, 100, 0, 0
+	PMS: 2612 C
+
+Fonts	
+	Main Font: Helvetica Neue 55 Roman
+	           Helvetica Neue 75 Bold
+	TM/Registered TM: Helvetica Neue 75 Bold
+
+See included style guide PDF for usage guidelines.

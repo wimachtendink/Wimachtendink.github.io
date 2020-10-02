@@ -1,11 +1,445 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-	<h1>Yes, there has been a change!</h1>
-  </body>
+ <!doctype html> 
+ <html> 
+   <head> 
+	 <style> 
+.container {
+
+margin: 50px;
+
+	background: rgb(50,50,50);
+	border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 5vmin 20vmin 20vmin 5vmin;
+  grid-gap: 10px;
+  grid-template-areas: 
+    "photo   photo  photo   title   title" 
+    "photo   photo   photo   info   info" 
+    "photo   photo     photo   comment comment"
+	"photo   photo     photo   tag tag"
+	
+}
+
+p 
+{
+	padding: 10px;
+}
+
+.title {
+	text-align: center;
+  grid-area: title;
+  //background: grey;
+  color: White;
+  //border-radius: 5%;
+}
+
+.photo {
+  grid-area: photo;
+  //background: yellow;
+}
+
+.photo>img {
+  
+  object-fit: center;
+  //width: 100%;
+  margin: 20px;
+  max-height: 90%;
+  border-radius: 5%;
+}
+
+.info {
+  grid-area: info;
+  
+  padding: 0px 0px 0px 10px;
+  
+  border-color: Black;
+  border-style: solid;
+  border-width: medium;
+  border-radius: 5px 0px 0px 50px;
+}
+
+.comment {
+  grid-area: comment;
+  
+  padding: 0px 0px 0px 10px;
+  
+  border-color: Black;
+  
+  border-style: solid;
+  border-width: medium;
+  
+  //border
+  
+  border-style: solid;
+  border-width: medium;
+  border-radius: 5px 0px 0px 50px;
+}
+
+
+.tag {
+	padding: 10px 10px 0px 0px;
+  text-align: center;
+  text-justify: center;
+  grid-area: tag;
+    
+  color:black;
+	
+  background: DarkGray;
+  border-radius: 50px 0px 25px 0px;
+}
+
+.video {
+	text-align: center;
+	border-radius: 5%;
+}
+
+body
+{
+	background: black;
+	color: LightGray;
+	
+	text-align: center;
+}
+
+h1 
+{
+	text-align: center;
+}
+
+h3
+{
+	text-align: center;
+}
+
+.categotyHeading{
+	  text-decoration: underline;
+}
+
+
+
+ </style> 
+ 
+<meta charset="utf-8">
+<title>
+    Home
+</title>
+</head>
+<body>
+    <div>
+        <img src="PersonalLogo_MoreBlack.png" width="100%" height="auto" />
+    </div>
+    <hr>
+    <h2>
+        wimachtendink@gmail.com
+    </h2>
+    <hr>
+    <br>
+    <br>
+    <h1 class="categotyHeading">
+        MY PROJECTS
+    </h1>
+    <br>
+    <div>
+        <div>
+            <h1>
+                VR ASCII ROGUELIKE (WIP)
+            </h1>
+        </div>
+        <div>
+            <img src="VR_Ascii_Roguelike_image.png" />
+        </div>
+        <div>
+            <h3>
+                Creative:
+            </h3>
+            <p>
+                A colony simulation taking inspiration from Dwarf Fortress.
+                <br>
+                <br>
+                You guide a tribe of goblins to exhume your deamonic body
+                <br>
+                which is imprisonment deep beneath the ground
+            </p>
+        </div>
+        <div>
+            <h3>
+                Technical:
+            </h3>
+            <ul>
+                <li>
+                    2 million cube rendered simultaneously
+                </li>
+                <li>
+                    hundreds of autonomous units
+                </li>
+                <li>
+                    ASCII GRAPHICS IN VR!!
+                </li>
+            </ul>
+        </div>
+        <div>
+            C++, OpenXR, OpenGL, GLSL, SDL2
+        </div>
+    </div>
+    <div>
+        <div>
+            <h1>
+                Match 3 Cube
+            </h1>
+        </div>
+        <div>
+            <a href="https://christopherlore.itch.io/match-3-webvr" target="_blank">
+            <img src="match3_cube.png" justify"center" />
+            </a>
+        </div>
+        <div>
+            <h3>
+                Creative:
+            </h3>
+            <p>
+                Match 3 game for WebXR
+                <br>
+                <br>
+                Match like images on x, y, and z axes including internal lines
+                <br>
+                Game Customization options including <br>
+				setting dimention, quantity of glyphs, and minimum run length
+            </p>
+        </div>
+        <div>
+            <h3>
+                Technical:
+            </h3>
+            <ul>
+                <li>
+                    WebXR
+                </li>
+                <li>
+                    Runs in browser
+                </li>
+            </ul>
+        </div>
+        <div>
+            C#, Unity, WebXR, JavaScript
+        </div>
+    </div>
+    <div>
+        <div>
+            <h1>
+                Dragon Guide
+            </h1>
+        </div>
+        <div>
+            <a href="https://store.steampowered.com/app/1118390/Dragon_Guide/" target="_blank">
+            <img src="dragonGuide.png" justify"center" />
+            </a>
+        </div>
+        <div>
+            <h3>
+                Creative:
+            </h3>
+            <p>
+                Guide a Water Dragon around in roomscale VR
+                <br>
+                <br>
+                As the dragon eats it becomes longer and faster
+                <br>
+                increasing difficulty for the player
+            </p>
+        </div>
+        <div>
+            <h3>
+                Technical:
+            </h3>
+            <ul>
+                <li>
+                    Implemented with Unity ECS, BURST, Job System
+                </li>
+                <li>
+                    Runs on minimal hardware
+                </li>
+            </ul>
+        </div>
+        <div>
+            C#, Unity XR
+        </div>
+    </div>
+	
+
+	
+	
+    <hr>
+    <br>
+    <br>
+    <br>
+    <h1 class="categotyHeading">
+        CONTRACTED PROJECTS
+    </h1>
+    <br>
+    <br>
+    <div>
+        <div>
+            <h1>
+                Untitled Handshake Game
+            </h1>
+        </div>
+        <div>
+            <img src="UntitledHandshakeGame.png">
+        </div>
+        <div>
+            <h3>
+                Creative:
+            </h3>
+            <p>
+                Match 3 game for WebXR
+                <br>
+                <br>
+                As the dragon eats it becomes longer and faster
+                <br>
+                increasing difficulty for the player
+            </p>
+        </div>
+        <div>
+            <h3>
+                Technical:
+            </h3>
+            <ul>
+                <li>
+                    Implemented with Unity ECS, BURST, Job System
+                </li>
+                <li>
+                    Runs on minimal hardware
+                </li>
+            </ul>
+        </div>
+        <div>
+            C#, Unity XR
+        </div>
+    </div>
+    <div>
+        <div>
+            <h1>
+                Untitled Lamia Vore Simulator
+            </h1>
+        </div>
+        <div>
+            <img src="Lamia_vore_simulator.png" justify "center" />
+        </div>
+        <div>
+            <h3>
+                Creative:
+            </h3>
+            <p>
+                Match 3 game for WebXR
+                <br>
+                <br>
+                As the dragon eats it becomes longer and faster
+                <br>
+                increasing difficulty for the player
+            </p>
+        </div>
+        <div>
+            <h3>
+                Technical:
+            </h3>
+            <ul>
+                <li>
+                    Implemented with Unity ECS, BURST, Job System
+                </li>
+                <li>
+                    Runs on minimal hardware
+                </li>
+            </ul>
+        </div>
+        <div>
+            C#, Unity XR
+        </div>
+    </div>
+	
+		    <hr>
+    <br>
+    <br>
+    <h1 class="categotyHeading">
+        UNIVERSITY PROJECTS
+    </h1>
+    <br>
+	
+    <div>
+        <div>
+            <h1>
+                UrCube
+            </h1>
+        </div>
+        <div>
+            <img src="UrCube.png" justify "center" />
+        </div>
+        <div>
+            <h3>
+                Creative:
+            </h3>
+            <p>
+                Turn Based Chess-like Game of Constrained Movements in VR
+                <br>
+				Each player moves one of their game pieces per turn
+				<br>
+				Each piece can move up to a limited distance on some combination of <br>
+				six Cardinal directions, twelve Diagonal directions, and eight <a href="https://en.wikipedia.org/wiki/Space_diagonal" target="_blank">Triagonal</a> directions.
+            </p>
+        </div>
+        <div>
+            <h3>
+                Technical:
+            </h3>
+            <ul>
+                <li>
+                    Chess-like AI techniques implemented
+                </li>
+                <li>
+                    Inutuitive XR interface
+                </li>
+            </ul>
+        </div>
+        <div>
+            C#, Unity, SteamVR/OpenVR 
+        </div>
+    </div>
+	
+	
+	<div>
+        <div>
+            <h1>
+                Musical memory Matcher VR
+            </h1>
+        </div>
+        <div>
+            <img src="MusicalMemoryMatcher.png" justify "center" />
+        </div>
+        <div>
+            <h3>
+                Creative:
+            </h3>
+            <p>
+                Listen to audio cues from various sources and try to 
+                <br>
+				pair them with another source which is playing the same cue
+            </p>
+        </div>
+        <div>
+			<h3>
+				Technical:
+			</h3>
+			<p>
+				Implemented spatialized audio with increased precision
+				<br>
+				for improved user experience
+			</p>
+        </div>
+        <div>
+            C#, Unity, SteamVR/OpenVR 
+        </div>
+    </div>
+	
+	
+</body>
+
 </html>
